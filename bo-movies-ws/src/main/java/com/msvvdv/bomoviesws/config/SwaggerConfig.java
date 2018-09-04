@@ -32,7 +32,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("User API")
+                .title("Movie API")
                 .description("API to manage movies from Box-Office")
                 .version("1.0")
                 .build();

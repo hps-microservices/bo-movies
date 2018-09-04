@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("user")
-@Api(value = "Manage Users", tags = "User")
+@RequestMapping("movie")
+@Api(value = "Manage Movies", tags = "movie")
 public class MovieRest {
 
     @Autowired
@@ -26,6 +26,11 @@ public class MovieRest {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public void save(@RequestBody MovieDTO userDTO){
         movieService.save(convertToEntity(userDTO));
+    }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<MovieDTO> findMovieDetails(){
+        return convertToDto(movieService.findAll());
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)

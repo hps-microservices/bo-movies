@@ -7,16 +7,20 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.math.BigDecimal;
+import java.time.Duration;
+
 @NoArgsConstructor
 @Document(collection = "user")
+@Getter
 public class Movie {
     @Id
     @Field("_id")
     private String idMongo;
-    @Getter @Setter
+    @Setter
     private Long id;
-    @Getter
     private String name;
-    @Getter
-    private int age;
+    private Duration duration;
+    private String gender;
+    private BigDecimal price;
 }

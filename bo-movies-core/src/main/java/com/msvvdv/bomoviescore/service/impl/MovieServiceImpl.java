@@ -18,11 +18,11 @@ public class MovieServiceImpl implements MovieService {
     @Autowired
     private SequenceService sequenceService;
 
-    private final static String SEQUENCE_USER_KEY = "user";
+    private final static String SEQUENCE_MOVIE_KEY = "movie";
 
     @Override
     public void save(Movie movie) {
-        movie.setId(sequenceService.getNextSequenceId(SEQUENCE_USER_KEY));
+        movie.setId(sequenceService.getNextSequenceId(SEQUENCE_MOVIE_KEY));
         movieRepository.save(movie);
     }
 
