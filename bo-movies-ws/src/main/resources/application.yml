@@ -1,0 +1,16 @@
+bo-movies:
+  display-name: ${spring.application.name}
+
+info:
+  name: ${spring.application.name}
+#  version: @project.version@
+
+server:
+  port: 7901
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: ${spring.application.name}

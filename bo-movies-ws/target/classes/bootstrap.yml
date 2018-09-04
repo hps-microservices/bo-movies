@@ -1,0 +1,63 @@
+# Typically this file contains two properties:
+
+# -- location of the configuration server (spring.cloud.config.uri)
+# -- name of the application (spring.application.name)
+#
+# font: https://code.i-harness.com/en/q/1f77fe8
+
+spring:
+  application:
+    name: bo-movies  # This property is the multi-instance (serviceID) groupId of this application
+  profiles:
+    active: default
+  cloud:
+    config:
+      enabled: false  #If want remote config, change for true value.
+
+eureka:
+  instance:
+    appname: ${spring.application.name}
+    prefer-ip-address: true # Register the IP of the service rather than the server name.
+  client:
+    register-with-eureka: true # enable connection with eureka server...
+    fetch-registry: true # Pull down a local copy of the registry.
+    service-url: # Url from Eureka Server
+      defaultZone: http://localhost:8761/eureka/
+
+
+# ***********************************************************************************************
+#                           EXPLANATION ABOUT SOME PROPERTIES                                   #
+# ***********************************************************************************************
+# spring.application.name                                                                       #
+#                                                                                               #
+# Every service registered with Eureka will have two components associated with it: the         #
+# application ID and the instance ID . The application ID is used to represent a group          #
+# service instance. In a Spring-Boot-based microservice, the application ID will always be      #
+# the value set by the spring.application.name property. For your organization ser-             #
+# vice, your spring.application.name is creatively named organizationservice. The               #
+# instance ID will be a random number meant to represent a single service instance.             #                                                                                  #
+# --------------------------------------------------------------------------------------------- #
+# prefer-ip-address: true                                                                       #
+#                                                                                               #
+# By default, Eureka will try to register the services that contact it by hostname. This        #
+# works well in a server-based environment where a service is assigned a DNS-backed             #
+# host name. However, in a container-based deployment (for example, Docker), con-               #
+# tainers will be started with randomly generated hostnames and no DNS entries for              #
+# the containers.                                                                               #
+# If you don’t set the eureka.instance.preferIpAddress to true, your client                     #
+# applications won’t properly resolve the location of the hostnames because there will          #
+# be no DNS entry for that container. Setting the preferIpAddress attribute will                #
+# inform the Eureka service that client wants to be advertised by IP address.                   #
+# --------------------------------------------------------------------------------------------- #
+# fetch-registry: true                                                                          #
+#                                                                                               #
+# The eureka.client.fetchRegistry                                                               #
+# attribute is used to tell the Spring Eureka Client to fetch a local copy of the registry.     #
+# Setting this attribute to true will cache the registry locally instead of calling the Eureka  #
+# service with every lookup. Every 30 seconds, the client software will re-contact the          #
+# Eureka service for any changes to the registry.                                               #
+# --------------------------------------------------------------------------------------------- #
+
+
+
+
