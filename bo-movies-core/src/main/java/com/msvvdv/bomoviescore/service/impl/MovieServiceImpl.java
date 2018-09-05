@@ -1,6 +1,7 @@
 package com.msvvdv.bomoviescore.service.impl;
 
 import com.msvvdv.bomoviescore.entity.Movie;
+import com.msvvdv.bomoviescore.entity.MovieDetails;
 import com.msvvdv.bomoviescore.repository.MovieRepository;
 import com.msvvdv.bomoviescore.service.MovieService;
 import com.msvvdv.bomoviescore.service.SequenceService;
@@ -29,5 +30,10 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public List<Movie> findAll() {
         return movieRepository.findAll();
+    }
+
+    @Override
+    public MovieDetails findMovieDetails() {
+        return null;
     }
 }

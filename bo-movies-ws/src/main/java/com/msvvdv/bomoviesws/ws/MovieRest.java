@@ -6,7 +6,9 @@ import com.msvvdv.bomoviescore.service.MovieService;
 import io.swagger.annotations.Api;
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -23,18 +25,22 @@ public class MovieRest {
     @Autowired
     private DozerBeanMapper beanMapper;
 
-
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void save(@RequestBody MovieDTO movieDTO){
-        Movie movie = new Movie();
-        beanMapper.map(movieDTO,movie);
-        movieService.save(movie);
+    public ResponseEntity save(@RequestBody MovieDTO movieDTO){
+        movieService.save(toEntity(movieDTO));
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<MovieDTO> findAll(){
-        return toDto(movieService.findAll());
+    public ResponseEntity<List<MovieDTO>> findAll(){
+        return new ResponseEntity(toDto(movieService.findAll()), HttpStatus.OK);
     }
+
+
+//    @GetMapping(path = "/movie-details",produces = MediaType.APPLICATION_JSON_VALUE)
+//    public List<MovieDTO> findMovieDetails(){
+//        return toDto(movieService.findAll());
+//    }
 
     private Movie toEntity(MovieDTO dto){
         Movie entity = new Movie();
@@ -55,9 +61,4 @@ public class MovieRest {
         });
         return moviesDTO;
     }
-
-
-
-
-
 }
