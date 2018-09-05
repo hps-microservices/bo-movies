@@ -12,10 +12,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfig {                                    
+public class SwaggerConfig {
 
     private static final String PATH_MAPPING = "/";
-
     private static final String PACKAGE_BASE = "com.msvvdv.bomoviesws";
 
     @Bean

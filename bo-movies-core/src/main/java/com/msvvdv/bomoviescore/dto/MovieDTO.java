@@ -1,10 +1,6 @@
 package com.msvvdv.bomoviescore.dto;
 
-import com.msvvdv.bomoviescore.entity.MovieDetails;
 import lombok.*;
-
-import java.math.BigDecimal;
-import java.time.Duration;
 
 @NoArgsConstructor
 @ToString
@@ -12,8 +8,7 @@ import java.time.Duration;
 @AllArgsConstructor
 @Data
 public class MovieDTO {
-    private MovieDetails movieDetails;
-    private Duration duration;
+   private String name;
     private String gender;
-    private BigDecimal price;
+
 }

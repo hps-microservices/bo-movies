@@ -1,13 +1,13 @@
 package com.msvvdv.bomoviesws.config;
 
-import org.modelmapper.ModelMapper;
+import org.dozer.DozerBeanMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class ModelMapperConfig {
+public class DozerConfig {
     @Bean
-    public ModelMapper modelMapper(){
-        return new ModelMapper();
+    public DozerBeanMapper beanMapper(){
+        return new DozerBeanMapper();
     }
 }

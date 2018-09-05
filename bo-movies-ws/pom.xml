@@ -32,12 +32,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- DTO converter-->
-        <dependency>
-            <groupId>org.modelmapper</groupId>
-            <artifactId>modelmapper</artifactId>
-            <version>0.7.4</version>
-        </dependency>
         <!-- Web Dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
