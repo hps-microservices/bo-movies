@@ -1,0 +1,12 @@
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/dto/MovieDTO.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/service/MovieService.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/entity/Movie.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/service/impl/SequenceServiceImpl.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/config/MongoConfiguration.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/exception/SequenceException.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/service/SequenceService.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/entity/SequenceId.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/entity/MovieDetails.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/service/impl/MovieServiceImpl.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/repository/MovieRepository.java
+/opt/idea-IU-181.4203.550/workspace/bo-movies/bo-movies-core/src/main/java/com/msvvdv/bomoviescore/config/ModuleConfiguration.java

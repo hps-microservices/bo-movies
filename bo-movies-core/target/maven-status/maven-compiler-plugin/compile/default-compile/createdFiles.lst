@@ -1,0 +1,12 @@
+com/msvvdv/bomoviescore/config/ModuleConfiguration.class
+com/msvvdv/bomoviescore/exception/SequenceException.class
+com/msvvdv/bomoviescore/entity/MovieDetails.class
+com/msvvdv/bomoviescore/service/impl/SequenceServiceImpl.class
+com/msvvdv/bomoviescore/entity/SequenceId.class
+com/msvvdv/bomoviescore/config/MongoConfiguration.class
+com/msvvdv/bomoviescore/service/MovieService.class
+com/msvvdv/bomoviescore/service/SequenceService.class
+com/msvvdv/bomoviescore/entity/Movie.class
+com/msvvdv/bomoviescore/service/impl/MovieServiceImpl.class
+com/msvvdv/bomoviescore/repository/MovieRepository.class
+com/msvvdv/bomoviescore/dto/MovieDTO.class
