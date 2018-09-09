@@ -19,7 +19,7 @@ public class SwaggerConfig {
 
     @Bean
     Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
+        return new Docket(DocumentationType.SWAGGER_12)
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage(PACKAGE_BASE))
